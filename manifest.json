@@ -1,0 +1,32 @@
+{
+    "name": "Hello Extensions",
+    "description": "Base Level Extension",
+    "version": "1.0",
+    "manifest_version": 2,
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon_16.png",
+            "128": "icon_128.png"
+        }
+    },
+    "icons": {
+        "16": "icon_16.png",
+        "128": "icon_128.png"
+    },
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "permissions": ["https://*.google.com/", "activeTab", "storage", "declarativeContent"],
+    "options_page": "options.html",
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Opens window.html"
+        }
+    }
+}
